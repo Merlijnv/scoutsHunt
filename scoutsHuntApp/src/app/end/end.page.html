@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>end</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="game">
+    <ion-item *ngFor="let hiker of game.hikers">
+      {{hiker.name}} | {{hiker.spots.length}}
+    </ion-item>
+    </ion-list>
+</ion-content>

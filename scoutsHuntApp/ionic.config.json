@@ -1,0 +1,8 @@
+{
+  "name": "scoutsHuntApp",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

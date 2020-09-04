@@ -1,0 +1,17 @@
+<div *ngIf="!game.started">
+    <p>Please wait unit the game has started</p>
+</div>
+
+<div *ngIf="game.started">
+    <div  *ngFor="let hiker of game.hikers">
+        <h2>
+            {{hiker.name}}        
+        </h2>
+
+        <ul>
+            <li *ngFor="let spot of hiker.spots">
+                {{spot.spotMoment.split('T')[1].split('.')[0]}}
+            </li>
+        </ul>
+    </div>
+</div>

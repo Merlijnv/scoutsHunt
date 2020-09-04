@@ -1,0 +1,11 @@
+.middle{
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    font-size: xx-large;
+}
+
+button{
+    height: auto;
+    font-size: xx-large;
+}

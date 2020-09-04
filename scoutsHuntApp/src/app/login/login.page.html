@@ -1,0 +1,15 @@
+<ion-content>
+
+<ion-item>
+  <ion-label position="floating">Enter code to join</ion-label>
+  <ion-input type="number" clearInput [(ngModel)]="code"></ion-input>
+</ion-item>
+
+<ion-button expand="block" color="primary" size="large" (click)="join()">Join Game</ion-button>
+
+<ion-button expand="block" color="primary" size="large" (click)="create()">Create Game</ion-button>
+
+<ion-button *ngIf="saved" expand="block" color="primary" size="large" (click)="continue()">Continue</ion-button>
+
+
+</ion-content>

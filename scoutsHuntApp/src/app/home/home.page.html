@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>home - <span *ngIf="game">{{game.code}}</span></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="amount" >
+    <div *ngFor="let hiker of amount; let i = index">
+
+      <ion-item class="hiker">
+        <ion-label position="floating">Hiker</ion-label>
+        <ion-input type="text" clearInput [(ngModel)]="newHikers[i]"></ion-input>
+      </ion-item>
+      <ion-button (click)="remove(i)" class="remove">
+        <ion-icon slot="icon-only" name="remove-circle-outline"></ion-icon>
+      </ion-button>
+
+    </div>
+  </div>
+  <ion-button (click)="add()" class="add">
+    <ion-icon slot="icon-only" name="add-circle-outline"></ion-icon>
+  </ion-button>
+  <br/>
+
+  <ion-item class="length">
+    <ion-label position="floating">Game Length</ion-label>
+    <ion-input type="number" clearInput [(ngModel)]="length"></ion-input>
+  </ion-item>
+  <ion-button (click)="save()" class="save"> 
+    <ion-icon slot="icon-only" name="save-outline"></ion-icon>
+  </ion-button>
+
+  <ion-button expand="block" color="primary" size="large" (click)="start()">Start Game</ion-button>
+  
+  <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  
+</ion-content>

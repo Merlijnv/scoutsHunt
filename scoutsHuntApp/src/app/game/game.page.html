@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>game - <span *ngIf="game">{{game.code}}</span></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list *ngIf="game">
+    <ion-item *ngFor="let hiker of game.hikers" (click)="spot(hiker.id, hiker.name)">
+      {{hiker.name}}
+    </ion-item>
+  </ion-list>
+  <ion-button expand="block" color="primary" size="large" (click)="end()">End Game</ion-button>
+</ion-content>
