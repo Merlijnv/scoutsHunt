@@ -1,4 +1,4 @@
 export const environment = {
-  url: 'http://77.162.168.155:81',
+  url: 'http://vdi.reydecarle.nl:9191',
   production: true
 };
