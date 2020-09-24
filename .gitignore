@@ -2,3 +2,6 @@
 .DS_Store
 scoutsHunt/bin/*
 scoutsHunt/bin/
+scoutsHunt/obj/
+
+scoutsHunt/.idea/
